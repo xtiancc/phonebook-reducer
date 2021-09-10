@@ -23,7 +23,13 @@ const TablaContactos = ({contacts = [], dispatchContacts}) => {
             </thead>
             <tbody>
                 {
-                    contacts.map( i => {
+                    contacts.length === 0
+                    ? <tr>
+                        <td colspan="4" className="text-center font-weight-light">
+                            No cuenta con ningún contacto. Para agregar a la lista clic sobre "<em>+ Agregar nuevo</em>".
+                        </td>
+                    </tr>
+                    : contacts.map( i => {
 
                         const finalID = i.id.split("-")
 

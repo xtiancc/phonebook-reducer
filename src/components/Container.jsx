@@ -21,7 +21,7 @@ const Contactos = () => {
     return (
         <div className="container mt-3">
 
-            <button  type="button" class="btn btn-primary btn-block" onClick={() => isFormView(!formView)}>
+            <button type="button" className="btn btn-primary btn-block" onClick={() => isFormView(!formView)}>
                 {formView ? "- Cerrar formulario" : "+ Agregar nuevo"}
             </button>
             {formView && <Form dispatchContacts={dispatch}/>}
