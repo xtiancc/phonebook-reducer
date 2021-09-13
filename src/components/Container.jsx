@@ -5,18 +5,18 @@ import { ContactsReducer } from '../reducers/ContactsReducer'
 
 const init = () => {
     const contacts = localStorage.getItem("contacts")
-    return contacts ? JSON.parse(contacts) : [];
+    return contacts ? JSON.parse(contacts) : []
 }
 
 const Contactos = () => {
 
-    const [state, dispatch] = useReducer(ContactsReducer, [], init);
+    const [state, dispatch] = useReducer(ContactsReducer, [], init)
 
     useEffect(() => {
         localStorage.setItem("contacts", JSON.stringify(state))
     }, [state])
 
-    const [formView, isFormView] = useState(false);
+    const [formView, isFormView] = useState(false)
 
     return (
         <div className="container mt-3">
